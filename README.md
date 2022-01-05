@@ -20,3 +20,11 @@
 8. **Repository** handles data stored in DB.
 
 ---
+
+## Generating things
+
+1. module `nest g module users` .
+2. controller `nest g controller users`.
+3. service `nest g service users`.
+
+---
