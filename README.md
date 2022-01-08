@@ -28,3 +28,9 @@
 3. service `nest g service users`.
 
 ---
+
+## synchronize option in TypeOrmModule.forRoot
+
+Synchronize Should be set to `false` in production
+
+---
