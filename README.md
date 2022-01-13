@@ -34,3 +34,20 @@
 Synchronize Should be set to `false` in production
 
 ---
+
+## Validation
+
+1. Configure nest to use validation via ValidationPipe.
+2. Create a DTO (data transfer object).
+3. Add validation rules to the DTO.
+4. Apply the DTO to the request handler as a `type`.
+
+---
+
+## whitelist
+
+`whitelist: true` The purpoose of this is to ensure that the app consumes only the properties it expects from the incoming request. If there is additional properties, they will be stripped away.
+
+```ts
+app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+```
