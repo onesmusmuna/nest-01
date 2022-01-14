@@ -51,3 +51,16 @@ Synchronize Should be set to `false` in production
 ```ts
 app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 ```
+
+## Injecting Repository in service
+
+```ts
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+import { User } from './user.entity';
+
+@Injectable()
+export class UsersService {
+  constructor(@InjectRepository(User) private repo: Repository<User>) {}
+}
+```
