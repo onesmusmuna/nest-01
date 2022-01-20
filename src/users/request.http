@@ -1,8 +1,30 @@
-
+### signup
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "aa@ll.com",
-  "password": "aall"
+  "email": "dd@ll.com",
+  "password": "ddll",
+  "career": "webdeveloper"
 }
+
+
+### findOne by ID
+GET http://localhost:3000/auth/2
+
+
+### findMany by career
+GET http://localhost:3000/auth?career=plumber
+
+
+### update user
+PATCH http://localhost:3000/auth/1 
+Content-Type: application/json
+
+{
+  "career": "devops"
+}
+
+
+### delete user
+DELETE http://localhost:3000/auth/2 

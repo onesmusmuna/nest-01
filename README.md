@@ -52,6 +52,8 @@ Synchronize Should be set to `false` in production
 app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 ```
 
+---
+
 ## Injecting Repository in service
 
 ```ts
@@ -64,3 +66,33 @@ export class UsersService {
   constructor(@InjectRepository(User) private repo: Repository<User>) {}
 }
 ```
+
+---
+
+## Typeorm reference
+
+Entity decorators
+[enter link description here](https://github.com/typeorm/typeorm/blob/master/docs/decorator-reference.md)
+
+Repository methods
+[enter link description here](https://typeorm.delightful.studio/classes/_repository_repository_.repository.html)
+
+---
+
+## Typescript
+
+Partial
+`Partial<T>` is a utility that will take a given type and return a new type where all of it's properties are optional.
+
+```ts
+  async update(id: number, props: Partial<User>) {
+    const user = await this.repo.findOne(id);
+    if (!user) {
+      return 'user does not exist';
+    }
+    Object.assign(user, props);
+    return this.repo.save(user);
+  }
+```
+
+---
