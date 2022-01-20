@@ -10,7 +10,7 @@ Content-Type: application/json
 
 
 ### findOne by ID
-GET http://localhost:3000/auth/2
+GET http://localhost:3000/auth/1
 
 
 ### findMany by career
@@ -18,11 +18,11 @@ GET http://localhost:3000/auth?career=plumber
 
 
 ### update user
-PATCH http://localhost:3000/auth/1 
+PATCH http://localhost:3000/auth/3
 Content-Type: application/json
 
 {
-  "career": "devops"
+  "career": "dentist"
 }
 
 
