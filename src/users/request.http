@@ -3,18 +3,18 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "dd@ll.com",
-  "password": "ddll",
-  "career": "webdeveloper"
+  "email": "test@test.com",
+  "password": "test",
+  "career": "Car Mechanic"
 }
 
 
 ### findOne by ID
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/4
 
 
 ### findMany by career
-GET http://localhost:3000/auth?career=plumber
+GET http://localhost:3000/auth?career=Car Mechanic
 
 
 ### update user
